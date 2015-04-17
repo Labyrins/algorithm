@@ -18,9 +18,9 @@ public class SelectSort {
         	int min = array[input-y];
 	        for(int i=input-y+1; i<input; i++){
 	            if(min>=array[i]){
-	            	tempA = array[input-y];
+	            	tempA = array[input-y+1];
 	            	tempB = array[i];
-	            	array[input-y] = tempB;
+	            	array[input-y+1] = tempB;
 	            	array[i] = tempA;
 	            }
 	            
