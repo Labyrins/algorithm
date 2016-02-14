@@ -8,14 +8,20 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
-		int b = sc.nextInt();
 		
-		for(int i=1;i<=b;i++){
-			for(int y=1;y<=a;y++){
-				System.out.print("("+i+", "+y+ ") ");
+		for(int i=a;i>0;i--){
+			for(int z=i;z<a;z++){
+				System.out.print(" ");
+			}
+			for(int y=i;y>0;y--){
+				System.out.print("*");
+			}
+			for(int y=i-1;y>0;y--){
+				System.out.print("*");
 			}
 			System.out.println();
 		}
+		
 		
 		
 	}
