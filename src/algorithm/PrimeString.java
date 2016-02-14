@@ -15,7 +15,7 @@ public class PrimeString {
             primeTable[x] = 0;
         } // initial PrimeTable
         for(int i = 0; i < inputLength; i++) {
-            int ascii = ((int) input.charAt(i)) - 65;
+            int ascii = (input.charAt(i)) - 65;
             primeTable[ascii] += 1;
         }
 
