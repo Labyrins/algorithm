@@ -10,35 +10,18 @@ public class Main {
 		int a = sc.nextInt();
 		int b = sc.nextInt();
 		
-		int big;
-		int small;
-		
-		if(a>=b){
-			big = a;
-			small = b;
-		}else{
-			big = b;
-			small = a;
-		}
-		
-		int sum=0;
-		int index=0;
-		double av;
-		
-		for(int i=small;i<=big;i++){
-			if((i%3)==0 || (i%5)==0){
-				sum+=i;
-				index++;
+		for(int i=1;i<=b;i++){
+			for(int y=1;y<=a;y++){
+				System.out.print("("+i+", "+y+ ") ");
 			}
+			System.out.println();
 		}
 		
 		
-		System.out.println("합계 : "+sum);
-		System.out.print("평균 : ");
-		System.out.printf("%.1f",sum/(double)index);
-
 	}
 
 }
 
 // 소수점 두번째 자리 반올림 System.out.printf("%.2f",y);
+//5 * 1 =  5   4 * 1 =  4   3 * 1 =  3
+//5 * 2 = 10   4 * 2 =  8   3 * 2 =  6
