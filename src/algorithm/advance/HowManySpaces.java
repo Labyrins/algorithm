@@ -1,3 +1,8 @@
+/**
+ * http://www.jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=729&sca=3030
+ * @author labyrins
+ */
+
 package algorithm.advance;
 
 import java.io.FileInputStream;
@@ -6,6 +11,7 @@ import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
+
 
 public class HowManySpaces {
 	
@@ -155,14 +161,14 @@ public class HowManySpaces {
 		return fourway;
 	}
 	
-//	public static void printMap(){
-//		for(int i=0; i<n; i++){
-//			for(int j=0; j<m; j++){
-//				System.out.print(map[i][j]+" ");
-//			}
-//			System.out.println();
-//		}
-//	}
+	public static void printMap(){
+		for(int i=0; i<n; i++){
+			for(int j=0; j<m; j++){
+				System.out.print(map[i][j]+" ");
+			}
+			System.out.println();
+		}
+	}
 	
 
 }
