@@ -7,11 +7,17 @@ public class Floyd {
 
 	static int n, l;
 	static int[][] map, cost;
+	static int INF = 9999999;
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		n = Integer.parseInt(br.readLine());
 		map = new int[n][n];
 		cost = new int[n][n];
+		for(int i=0; i<n; i++){
+			for(int j=0;j<n;j++){
+				if(i!=j) cost[i][j] = INF;
+			}
+		}
 		l = Integer.parseInt(br.readLine());
 		for(int i=0;i<l;i++){
 			String[] input = (br.readLine()).split(" ");
@@ -22,6 +28,15 @@ public class Floyd {
 				cost[x][y] = value;
 			}else{
 				cost[x][y] = (value<cost[x][y]) ? value : cost[x][y];
+			}
+		}
+		for(int i=0; i<n; i++){
+			for(int j=0;j<n;j++){
+				for(int k=0; k<n; k++){
+	                if(cost[j][k] > cost[j][i] + cost[i][k]){
+	                	cost[j][k] = cost[j][i] + cost[i][k];
+	                }
+	            }
 			}
 		}
 		printMap(cost);
